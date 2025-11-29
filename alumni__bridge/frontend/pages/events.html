@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Alumni Bridge</title>
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎉 Events</h1>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="goBack()">
+                    ← Back to Dashboard
+                </button>
+                <button class="btn btn-logout" onclick="logout()">
+                    🚪 Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Alert Container -->
+        <div id="alertContainer" class="alert-container"></div>
+
+        <!-- Tabs and Filters -->
+        <div class="tabs-container">
+            <nav class="tabs-nav">
+                <button class="tab-btn active" data-tab="all">
+                    All Events <span class="tab-badge">0</span>
+                </button>
+                <button class="tab-btn" data-tab="upcoming">
+                    Upcoming <span class="tab-badge">0</span>
+                </button>
+                <button class="tab-btn" data-tab="registered">
+                    My Registrations <span class="tab-badge">0</span>
+                </button>
+            </nav>
+            <div class="filters">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input"
+                    placeholder="🔍 Search events..."
+                >
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div id="eventsGrid" class="events-grid">
+            <div class="loading" style="grid-column: 1 / -1;">
+                <div class="loading-spinner"></div>
+                <p>Loading events...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Details Modal -->
+    <div id="eventModal" class="modal-overlay">
+        <div class="modal" id="modalContent">
+            <!-- Content populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="../js/events.js"></script>
+</body>
+</html>

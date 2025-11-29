@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniBridge | Network</title>
+  <link rel="stylesheet" href="../css/network.css">
+</head>
+<body class="network-page">
+  <div class="network-shell">
+    <header class="network-header">
+      <div class="header-top">
+        <div class="header-left">
+          <h1>My Network</h1>
+          <p>Discover peers, respond to connection requests, and track invitations you've sent.</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-secondary" onclick="goBack()">
+            ← Back to Dashboard
+          </button>
+          <button class="btn btn-logout" onclick="logout()">
+            🚪 Logout
+          </button>
+        </div>
+      </div>
+      <input
+        id="networkSearchInput"
+        type="search"
+        class="search-field"
+        placeholder="Search people by name, degree, institute, or skills"
+        autocomplete="off"
+      >
+    </header>
+
+    <div id="networkAlert" class="alert hidden" role="alert"></div>
+
+    <nav class="tabs" role="tablist">
+      <button
+        type="button"
+        class="tab-btn active"
+        data-tab="tab-all"
+        aria-selected="true"
+        aria-controls="tab-all"
+      >
+        All Users
+      </button>
+      <button
+        type="button"
+        class="tab-btn"
+        data-tab="tab-received"
+        aria-selected="false"
+        aria-controls="tab-received"
+      >
+        Received Requests <span id="receivedBadge" class="tab-badge hidden">0</span>
+      </button>
+      <button
+        type="button"
+        class="tab-btn"
+        data-tab="tab-sent"
+        aria-selected="false"
+        aria-controls="tab-sent"
+      >
+        Sent Requests <span id="sentBadge" class="tab-badge hidden">0</span>
+      </button>
+    </nav>
+
+    <main>
+      <section id="tab-all" class="tab-panel active" role="tabpanel">
+        <header class="panel-header">
+          <div>
+            <h2>All Users</h2>
+            <p>Send connection requests to people you'd like to connect with.</p>
+          </div>
+          <div class="sort-controls">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="name">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+              <option value="batch">Batch (Newest)</option>
+              <option value="batch-asc">Batch (Oldest)</option>
+              <option value="degree">Degree</option>
+              <option value="role">Role</option>
+            </select>
+          </div>
+        </header>
+        <div id="allUsersContainer" class="card-grid"></div>
+      </section>
+
+      <section id="tab-received" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <header class="panel-header">
+          <div>
+            <h2>Received Requests</h2>
+            <p>Accept or reject pending invitations from other members.</p>
+          </div>
+          <span id="receivedCount" class="count-badge">0 pending</span>
+        </header>
+        <div id="receivedContainer" class="card-grid"></div>
+      </section>
+
+      <section id="tab-sent" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <header class="panel-header">
+          <div>
+            <h2>Sent Requests</h2>
+            <p>Track the status of the requests you've sent and cancel if needed.</p>
+          </div>
+          <span id="sentCount" class="count-badge">0 pending</span>
+        </header>
+        <div id="sentContainer" class="card-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/network.js" defer></script>
+</body>
+</html>

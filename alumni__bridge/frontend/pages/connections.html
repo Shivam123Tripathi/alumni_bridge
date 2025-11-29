@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connections | AlumniBridge</title>
+  <link rel="stylesheet" href="../css/connections.css">
+</head>
+<body class="connections-page">
+  <div class="connections-shell">
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-content">
+        <h1>My Connections</h1>
+        <p>Manage your network - connect with alumni and students</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary" onclick="goBack()">← Back to Dashboard</button>
+        <button class="btn btn-logout" onclick="logout()">🚪 Logout</button>
+      </div>
+    </header>
+
+    <!-- Alert Container -->
+    <div id="alertContainer" class="alert-container"></div>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav" role="tablist">
+      <button class="tab-btn active" data-tab="all-users" role="tab" aria-selected="true">
+        All Users
+        <span class="tab-count" id="allUsersCount">0</span>
+      </button>
+      <button class="tab-btn" data-tab="sent-requests" role="tab" aria-selected="false">
+        Sent Requests
+        <span class="tab-count" id="sentCount">0</span>
+      </button>
+      <button class="tab-btn" data-tab="received-requests" role="tab" aria-selected="false">
+        Received Requests
+        <span class="tab-count" id="receivedCount">0</span>
+      </button>
+      <button class="tab-btn" data-tab="my-connections" role="tab" aria-selected="false">
+        My Connections
+        <span class="tab-count" id="connectionsCount">0</span>
+      </button>
+    </nav>
+
+    <!-- Tab Panels -->
+    <main class="tabs-content">
+      <!-- All Users Panel -->
+      <section id="all-users" class="tab-panel active" role="tabpanel">
+        <div class="panel-header">
+          <div>
+            <h2>Discover People</h2>
+            <p>Find and connect with alumni and students</p>
+          </div>
+          <div class="search-box">
+            <input type="search" id="searchAllUsers" placeholder="Search by name, email, degree..." autocomplete="off">
+          </div>
+        </div>
+        <div id="allUsersGrid" class="users-grid">
+          <div class="loading"><div class="spinner"></div></div>
+        </div>
+      </section>
+
+      <!-- Sent Requests Panel -->
+      <section id="sent-requests" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <div>
+            <h2>Sent Requests</h2>
+            <p>Connection requests you have sent</p>
+          </div>
+        </div>
+        <div id="sentRequestsGrid" class="users-grid">
+          <div class="loading"><div class="spinner"></div></div>
+        </div>
+      </section>
+
+      <!-- Received Requests Panel -->
+      <section id="received-requests" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <div>
+            <h2>Received Requests</h2>
+            <p>Pending requests from other users</p>
+          </div>
+        </div>
+        <div id="receivedRequestsGrid" class="users-grid">
+          <div class="loading"><div class="spinner"></div></div>
+        </div>
+      </section>
+
+      <!-- My Connections Panel -->
+      <section id="my-connections" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <div>
+            <h2>My Connections</h2>
+            <p>People you are connected with</p>
+          </div>
+        </div>
+        <div id="connectionsGrid" class="users-grid">
+          <div class="loading"><div class="spinner"></div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/connections.js"></script>
+</body>
+</html>
