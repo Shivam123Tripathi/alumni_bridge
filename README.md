@@ -59,4 +59,89 @@ Because of that:
 
 
 ## 📂 Project Structure
+alumni__bridge/
+│── backend/ # Spring Boot Project
+│ │── config/ # CORS & WebSocket configs
+│ │── controller/ # REST Controllers
+│ │── dto/ # Data Transfer Objects
+│ │── entity/ # JPA Entities (Database Tables)
+│ │── repository/ # JPA Repositories
+│ │── security/ # JWT Security + User Details
+│ │── service/ # Business Logic Layer
+│ │── resources/ # application.properties + SQL
+│
+│── frontend/
+│ │── css/ # UI Styling Files
+│ │── js/ # API + Page Logic
+│ │── html/ # UI Pages
+│ └── index.html
+│
+└── README.md
+
+
+---
+
+## 🏃 How to Run Backend (Spring Boot)
+
+```bash
+cd alumni__bridge/backend
+mvn spring-boot:run
+
+🌐 How to Run Frontend
+
+Simply open:
+
+alumni__bridge/frontend/index.html
+
+
+(No npm or yarn required – pure HTML/CSS/JS)
+
+🔌 API Endpoints (Examples)
+Method	Endpoint	Description
+POST	/api/auth/register	Register new user
+POST	/api/auth/login	Login & get JWT token
+GET	/api/users/all	Fetch all users
+POST	/api/request/send	Send connection request
+GET	/api/events/list	Get all events
+🧪 API Testing (Postman)
+
+Import your API endpoints in Postman
+
+First call /api/auth/login
+
+Copy JWT Token
+
+Go to Authorization → Bearer Token
+
+Paste token and test secured APIs
+
+📌 Future Enhancements
+
+AI-based Alumni Recommendation System
+
+Resume Builder & Job Portal
+
+LinkedIn-style Feed + Posts
+
+College-wide Notification System
+
+Mobile App with React Native
+
+👨‍💻 Author
+
+👤 Shivam Tripathi
+B.Tech CSE | Full Stack  Java Developer
+📧 Email: s.shivamtripathi13@gmail.com
+🔗 LinkedIn: linkedin.com/in/shivam-tripathi-b14141238
+
+💻 GitHub: github.com/Shivam123Tripathi
+
+⭐ Support
+
+If you like this project, support by ⭐ starring the repo!
+
+git clone https://github.com/Shivam123Tripathi/alumni_bridge.git
+
+🚀 “Connecting Students to Opportunities, Alumni to Legacy.”
+
 
