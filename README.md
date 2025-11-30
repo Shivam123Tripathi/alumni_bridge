@@ -1,7 +1,7 @@
 # 🎓 Alumni Bridge  Connecting Students & Alumni
 
-Alumni Bridge is a **full-stack web platform** designed to connect **students, alumni, faculty, and professionals** from the same college/university.  
-It helps users **build meaningful connections, chat in real-time, share opportunities, host events, and network smartly** for career growth.
+Alumni Bridge is a **full stack web platform** designed to connect **students, alumni, faculty, and professionals** from the same college/university.  
+It helps users **build meaningful connections, chat in real time, share opportunities, host events, and network smartly** for career growth.
 
 
 
@@ -47,7 +47,7 @@ Because of that:
 
 | Feature | Description |
 |--------|-------------|
-| 🔐 Authentication | Secure login, JWT-based authorization |
+| 🔐 Authentication | Secure login, JWT based authorization |
 | 💬 Real-Time Chat | WebSocket based live chat system |
 | 🧑‍🎓 Student & Alumni Profiles | Education, skills, experience |
 | 🔍 Search Users | Search by name, batch, profession, skills |
@@ -85,7 +85,7 @@ alumni__bridge/
 
 ```bash
 cd alumni__bridge/backend
-mvn spring-boot:run
+mvn spring boot:run
 
 🌐 How to Run Frontend
 
@@ -121,9 +121,9 @@ AI-based Alumni Recommendation System
 
 Resume Builder & Job Portal
 
-LinkedIn-style Feed + Posts
+LinkedIn style Feed + Posts
 
-College-wide Notification System
+College wide Notification System
 
 Mobile App with React Native
 
